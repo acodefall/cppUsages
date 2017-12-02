@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7DC56FB5-4A9E-4281-B1BA-786A50D2347A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CppProjs</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AssemblerOutput>All</AssemblerOutput>
+      <AdditionalIncludeDirectories>.\Compare;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>.\Compare;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppendCharToString.h" />
+    <ClInclude Include="ArrayToPointerCoversion.h" />
+    <ClInclude Include="BootStrap.h" />
+    <ClInclude Include="Compare\SortPredicateForMap.h" />
+    <ClInclude Include="Compare\SearchPredicateForList.h" />
+    <ClInclude Include="Compare\SortPredicateForList.h" />
+    <ClInclude Include="Compare\SortPredicateForSet.h" />
+    <ClInclude Include="ComparisonGraterLess.h" />
+    <ClInclude Include="ConstError.h" />
+    <ClInclude Include="CopyCtor.h" />
+    <ClInclude Include="CopyCTORCalling.h" />
+    <ClInclude Include="Encapsulations.h" />
+    <ClInclude Include="FactorialRecursion.h" />
+    <ClInclude Include="FriendTest.h" />
+    <ClInclude Include="LambdaCaptureList.h" />
+    <ClInclude Include="LambdaInplaceFuncPointer.h" />
+    <ClInclude Include="MapFunction.h" />
+    <ClInclude Include="MutexTest.h" />
+    <ClInclude Include="OverLoadIndexOp.h" />
+    <ClInclude Include="PaddingCout.h" />
+    <ClInclude Include="PostFixPreFixOverload.h" />
+    <ClInclude Include="PostRecursion.h" />
+    <ClInclude Include="PrintBitsUsingBitSet.h" />
+    <ClInclude Include="PrintHexDec.h" />
+    <ClInclude Include="PriorityQueueAsClassMember.h" />
+    <ClInclude Include="PriorityQueueUsage.h" />
+    <ClInclude Include="PriorityQUsage.h" />
+    <ClInclude Include="RefConstTest.h" />
+    <ClInclude Include="RTTICasting.h" />
+    <ClInclude Include="SetComparison.h" />
+    <ClInclude Include="SetUsage.h" />
+    <ClInclude Include="SharedPointerUsage.h" />
+    <ClInclude Include="SizeofX.h" />
+    <ClInclude Include="SmartPointerTest.h" />
+    <ClInclude Include="SmartPtr1.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="stringOperation.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="CollectionTypeStandardOverloads.h" />
+    <ClInclude Include="Thread1.h" />
+    <ClInclude Include="FindIf.h" />
+    <ClInclude Include="TimerRelated.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ConstantPointerTest.h" />
+    <ClCompile Include="CppProjs.cpp" />
+    <ClCompile Include="RunFunctionBeforeMain.h" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
