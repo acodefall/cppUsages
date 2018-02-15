@@ -6,7 +6,6 @@
 #include "FriendTest.h"
 #include "CopyCtor.h"
 #include "ConstError.h"
-#include "Thread1.h"
 #include "SmartPtr1.h"
 #include "MutexTest.h"
 #include "ConstantPointerTest.h"
@@ -38,10 +37,77 @@
 #include "PrintBitsUsingBitSet.h"
 #include "PrintHexDec.h"
 #include "SetUsage.h"
+#include "StaticClass.h"
+#include "ThreadClassMemberWorker.h"
+#include "ThreadStaticWorker.h"
+#include "ThreadWorkerGlobal.h"
+#include "Syncq.h"
+#include "ObjectPoolArc.h"
+#include "UsingList.h"
+#include "FactoryCreate.h"
+#include "ProtectedCtor.h"
+#include "OrderOfInit.h"
+#include "ReaderWriter.h"
+#include "RotateMatrix90.h"
+#include "FindDistinctIsland.h"
+#include "SearchWordInMatrix.h"
+#include "SmartPointerArc.h"
 
 BootStrapX gblBootStrapX;
 int _tmain(int argc, _TCHAR* argv[])
 {
+	SmartPointerArcNM::useSmartPointerArcC objuseSmartPointerArcC;
+	objuseSmartPointerArcC.create();
+
+	FactoryCreateNM::useMailServer  objuseMailServer;
+	objuseMailServer.createMailServers();
+
+	SearchWordInMatrixNM::SearchWordInMatrix objSearchWordInMatrix;
+	objSearchWordInMatrix.SearchWordInMatrixX();
+
+	FindDistinctIslandNM::FindDistinctIsland objFindDistinctIsland;
+	objFindDistinctIsland.callFindDistinctIsland();
+
+	RotateMatrix90NM::RotateMatrix objRotateMatrix90;
+	objRotateMatrix90.rotate();
+
+	//ReaderWriterNM::RdWr objRdWr;
+	//objRdWr.CreateThreads();
+
+	RefConstTest objRefConstTest;
+	objRefConstTest.callRefConstTest2();
+
+	OrderOfInitNM::testOrderInit objtestOrderInit;
+	objtestOrderInit.calltestOrderInit();
+
+	ProtectedCtorNM::callProtectedCtorArc objcallProtectedCtorArc;
+	objcallProtectedCtorArc.test();
+
+
+
+	UsingListNM::UsingListC objUsingListC;
+	objUsingListC.callUsingListC();
+
+	ObjectPoolArcNM::callObjectPoolArc objcallObjectPoolArc;
+	objcallObjectPoolArc.createThread();
+
+	SyncQNM::callSyncQArc objSyncQArc;
+	objSyncQArc.createThreads();
+
+	StaticClassNM::useStaticClass objuseStaticClass;
+	objuseStaticClass.createThreads();
+
+	ThreadWorkerGlobalNM::ThreadWorkerGlobal objThreadWorkerGlobal;
+	objThreadWorkerGlobal.createThreads();
+
+	ThreadStaticWorkerNM::ThreadStaticWorker objThreadStaticWorker;
+	objThreadStaticWorker.createThreads();
+
+	ThreadClassMemberWorkerNM::ThreadMemberWorker objThreadMemberWorker;
+	objThreadMemberWorker.createThreads();
+
+	
+
 	SetUsageNM::testSetUsage	objtestSetUsage;
 	objtestSetUsage.callsetSimpleUsage();
 
@@ -141,8 +207,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	SmartPtrTest objSmartPtrTest;
 	objSmartPtrTest.callSmartPtrTest();
 
-	RefConstTest objRefConstTest;
-	objRefConstTest.callRefConstTest1();
+	
 	
 
 
@@ -155,8 +220,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	ConstErrorTest objConstErrorTest;
 	objConstErrorTest.callConstErrorTest();
 
-	Thread1Test objThread1Test;
-	objThread1Test.callThread1Test();
+
 
 
 	SetComparisonNM::testSetComparisonNM objtestSetComparisonNM;

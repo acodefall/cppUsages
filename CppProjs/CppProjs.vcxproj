@@ -82,8 +82,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AccessorTest.h" />
     <ClInclude Include="AppendCharToString.h" />
     <ClInclude Include="ArrayToPointerCoversion.h" />
+    <ClInclude Include="BlockingQ.h" />
     <ClInclude Include="BootStrap.h" />
     <ClInclude Include="Compare\SortPredicateForMap.h" />
     <ClInclude Include="Compare\SearchPredicateForList.h" />
@@ -95,11 +97,16 @@
     <ClInclude Include="CopyCTORCalling.h" />
     <ClInclude Include="Encapsulations.h" />
     <ClInclude Include="FactorialRecursion.h" />
+    <ClInclude Include="FactoryCreate.h" />
+    <ClInclude Include="FindDistinctIsland.h" />
     <ClInclude Include="FriendTest.h" />
     <ClInclude Include="LambdaCaptureList.h" />
     <ClInclude Include="LambdaInplaceFuncPointer.h" />
     <ClInclude Include="MapFunction.h" />
     <ClInclude Include="MutexTest.h" />
+    <ClInclude Include="NullObject.h" />
+    <ClInclude Include="ObjectPoolArc.h" />
+    <ClInclude Include="OrderOfInit.h" />
     <ClInclude Include="OverLoadIndexOp.h" />
     <ClInclude Include="PaddingCout.h" />
     <ClInclude Include="PostFixPreFixOverload.h" />
@@ -109,21 +116,34 @@
     <ClInclude Include="PriorityQueueAsClassMember.h" />
     <ClInclude Include="PriorityQueueUsage.h" />
     <ClInclude Include="PriorityQUsage.h" />
+    <ClInclude Include="PrivateCtor.h" />
+    <ClInclude Include="ProtectedCtor.h" />
+    <ClInclude Include="ReaderWriter.h" />
     <ClInclude Include="RefConstTest.h" />
+    <ClInclude Include="RotateMatrix90.h" />
     <ClInclude Include="RTTICasting.h" />
+    <ClInclude Include="SearchWordInMatrix.h" />
     <ClInclude Include="SetComparison.h" />
     <ClInclude Include="SetUsage.h" />
     <ClInclude Include="SharedPointerUsage.h" />
     <ClInclude Include="SizeofX.h" />
+    <ClInclude Include="SmartPointerArc.h" />
     <ClInclude Include="SmartPointerTest.h" />
     <ClInclude Include="SmartPtr1.h" />
+    <ClInclude Include="SortMapByValue.h" />
+    <ClInclude Include="StaticClass.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="stringOperation.h" />
+    <ClInclude Include="SyncQ.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="CollectionTypeStandardOverloads.h" />
-    <ClInclude Include="Thread1.h" />
+    <ClInclude Include="ThreadWorkerGlobal.h" />
     <ClInclude Include="FindIf.h" />
+    <ClInclude Include="ThreadClassMemberWorker.h" />
+    <ClInclude Include="ThreadStaticWorker.h" />
     <ClInclude Include="TimerRelated.h" />
+    <ClInclude Include="UsingDetach.h" />
+    <ClInclude Include="UsingList.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ConstantPointerTest.h" />

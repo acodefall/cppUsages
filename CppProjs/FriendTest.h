@@ -27,8 +27,7 @@ using namespace std;
 		 Note the friend implementation should be PUBLIC.
 
 */
-class frndFuncAnotherClass1;
-class frndFuncAnotherClass2;
+
 
 //Friend sample where the friend-function is in Global scope
 class frndInGlobalScope
@@ -60,26 +59,29 @@ void exposed(frndInGlobalScope& f)
 	When declaring the Friend, the grating class should qulify the function-name with the class-name.
 	Note the friend implementation should be PUBLIC.
 */
-class frndFuncAnotherClass1
+class foriegnClass1;
+class friendGranter;
+
+class foriegnClass1
 {
 	public:
-		void Member1(frndFuncAnotherClass2& f1);
+		void Member1(friendGranter& f1);
 };
 
-class frndFuncAnotherClass2
+class friendGranter
 {
 	int x;
 
-public:
-	frndFuncAnotherClass2(int d)
-	{
-		x = d;
-	}
-	friend void frndFuncAnotherClass1::Member1(frndFuncAnotherClass2& f);
+	public:
+		friendGranter(int d)
+		{
+			x = d;
+		}
+		friend void foriegnClass1::Member1(friendGranter& f);
 };
 
 
-void frndFuncAnotherClass1::Member1(frndFuncAnotherClass2& f1)
+void foriegnClass1::Member1(friendGranter& f1)
 {
 	cout << "Friend function implemented in another class" << f1.x;
 }
@@ -87,17 +89,17 @@ void frndFuncAnotherClass1::Member1(frndFuncAnotherClass2& f1)
 
 class FriendTest
 {
-public:
-	void callFriendTest()
-	{
-		frndInGlobalScope xd(89);
-		exposed(xd);
-	}
-	void callFriendTest2()
-	{
-		frndFuncAnotherClass1 xd;
-		frndFuncAnotherClass2 frndParam(67);;
-		xd.Member1(frndParam);
-	}
+	public:
+		void callFriendTest()
+		{
+			frndInGlobalScope xd(89);
+			exposed(xd);
+		}
+		void callFriendTest2()
+		{
+			foriegnClass1 forgn;
+			friendGranter objfriendGranter(67);;
+			forgn.Member1(objfriendGranter);
+		}
 };
 #endif

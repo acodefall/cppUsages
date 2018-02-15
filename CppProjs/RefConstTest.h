@@ -26,6 +26,8 @@ class RefConstTest
 			int& r1 = v1; //Reference has to be initialized with L-value
 			r1 = 90; //R-value can be changed. And this changes original-value
 			cout << " v1 has changed " << v1 << "\r\n";
+			v1 = 100;
+			cout << " r1 has changed " << r1 << "\r\n";
 			r1 = v2; //L-Value can be changed
 			/////////////////////////////////////////////
 
@@ -56,8 +58,9 @@ class RefConstTest
 
 			//////For const-POINTER R-value can not be changed, but L-value can be changed.
 			const int* r2; //Const Reference can be initialized with CONST
-			//*r2 = 90; //R-Value can not be changed
 			r2 = &v2; //L-Value can be changed
+   		   //*r2 = 90; //R-Value can not be changed
+			v2 = 800;
 
 
 			/////For POINTER-Const R-value can be changed and L-value can not be changed
