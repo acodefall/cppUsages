@@ -40,34 +40,6 @@ namespace stringOperationNM
 					
 
 
-
-					//How to copy char* to string object
-					//iterate the char array and add one letter at a time using + operator.
-					//You can write a helper function to this.
-					/*
-						char* s;
-					
-						int len = strlen(s);
-						string s1;
-						for (int i = 0; i < len; i++)
-						{
-							s1 += s[i];
-						}
-						return s1;
-					*/
-
-
-
-					//Copy string object to char - array
-					//Use string::copy(); this does not allocate memory nor it puts EOL at the end.
-					//copy(char* s, size_t len, size_t pos = 0) const;
-					char buf[200];
-					string str("ghsdfsdfh");
-					int charsToCopy = 4;
-					int srcIdx = 2; //from where to copy
-					std::size_t copiedBytes = str.copy(buf, charsToCopy, srcIdx);
-					buf[copiedBytes] = '\0';
-
 				}
 	};
 };
