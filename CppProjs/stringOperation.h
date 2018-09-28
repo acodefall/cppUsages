@@ -57,8 +57,8 @@ namespace stringOperationNM
 					*/
 
 
-
-					//Copy string object to char - array
+					
+					//StringObject -> char[]
 					//Use string::copy(); this does not allocate memory nor it puts EOL at the end.
 					//copy(char* s, size_t len, size_t pos = 0) const;
 					char buf[200];
@@ -67,6 +67,19 @@ namespace stringOperationNM
 					int srcIdx = 2; //from where to copy
 					std::size_t copiedBytes = str.copy(buf, charsToCopy, srcIdx);
 					buf[copiedBytes] = '\0';
+					
+					//char[] -> StringObject
+					//Constructing String object out of existing char array
+					char bufx[3]={'a', 'n', 'k'};
+					string stx(bufx,sizeof(bufx)); 
+					
+					//Shrink StringObject.(like setting '\0' in C) 
+					//We used to shrink the c-array by setting '\0' somewhere in the middle of the array.
+                    //We want to do same for STRING. This is done using RESIZE
+					string someX("jkgchjgsdhgf");
+					int newLen = 3;
+					someX.resize(3);
+					
 
 				}
 	};
